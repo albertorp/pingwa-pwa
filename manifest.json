@@ -1,0 +1,17 @@
+{
+  "name": "PingWA",
+  "short_name": "PingWA",
+  "description": "Start a WhatsApp message without saving the number to your contacts.",
+  "start_url": "/pingwa-pwa/",
+  "display": "standalone",
+  "background_color": "#e6f7f5",
+  "theme_color": "#0d4a4f",
+  "icons": [
+    {
+      "src": "Icon-App-1024x1024@1x.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
