@@ -88,6 +88,23 @@
     </div>
 
     <p class="text-center text-xs text-gray-400 mt-4">No data stored. No accounts needed.</p>
+
+    <!-- Install hint -->
+    <p class="text-center text-xs text-gray-400 mt-3">
+      <span id="install-hint"></span>
+    </p>
+    <script>
+      const ua = navigator.userAgent;
+      const isIOS = /iP(hone|ad|od)/.test(ua);
+      const isAndroid = /Android/.test(ua);
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+      const hint = document.getElementById('install-hint');
+      if (!isStandalone && isIOS) {
+        hint.innerHTML = 'Tip: tap the Share button in Safari, then <strong>Add to Home Screen</strong> to use PingWA like an app.';
+      } else if (!isStandalone && isAndroid) {
+        hint.innerHTML = 'Tip: tap the Chrome menu (&#x22EE;) and choose <strong>Add to Home screen</strong> to use PingWA like an app.';
+      }
+    </script>
   </div>
   </div>
 
